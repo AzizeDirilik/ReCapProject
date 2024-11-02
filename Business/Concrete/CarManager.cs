@@ -22,5 +22,27 @@ namespace Business.Concrete
         {
             return _carDal.GetAll();
         }
+
+        public void Add(Car car)
+        {
+
+            if (car.CarName.Length >= 2 && car.DailyPrice > 0)
+            {
+                Console.WriteLine("Araba eklendi");
+            }
+            else if (car.DailyPrice <= 0 && car.CarName.Length >= 2)
+            {
+                Console.WriteLine("Fiyat 0'dan kucuk olamaz");
+
+            }
+            else if (car.CarName.Length <= 2 && car.DailyPrice > 0)
+            {
+                Console.WriteLine("Araba ismi minimum 2 karakter olmali");
+            }
+            else
+            {
+                Console.WriteLine("Araba ismi minimum 2 karakter olmali ve fiyat 0'dan buyuk olmali");
+            }
+        }
     }
 }

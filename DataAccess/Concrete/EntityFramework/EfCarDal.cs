@@ -40,7 +40,7 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<Car> GetAll(Expression<Func<Car, bool>>? filter = null)
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
             using(RentCarContext context = new RentCarContext())
             {

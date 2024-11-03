@@ -29,6 +29,7 @@ namespace Business.Concrete
             if (car.CarName.Length >= 2 && car.DailyPrice > 0)
             {
                 Console.WriteLine("Araba eklendi");
+                _carDal.Add(car);
             }
             else if (car.DailyPrice <= 0 && car.CarName.Length >= 2)
             {
@@ -43,6 +44,18 @@ namespace Business.Concrete
             {
                 Console.WriteLine("Araba ismi minimum 2 karakter olmali ve fiyat 0'dan buyuk olmali");
             }
+
+        }
+
+        public void Update(Car car)
+        {
+            _carDal.Update(car);
+
+        }
+
+        public void Delete(Car car)
+        {
+            _carDal.Delete(car);
         }
     }
 }

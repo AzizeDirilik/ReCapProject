@@ -16,3 +16,5 @@ C:\Users\Azize\source\repos\ReCapProject\Business\obj\Debug\net8.0\refint\Busine
 C:\Users\Azize\source\repos\ReCapProject\Business\obj\Debug\net8.0\Business.pdb
 C:\Users\Azize\source\repos\ReCapProject\Business\obj\Debug\net8.0\ref\Business.dll
 C:\Users\Azize\source\repos\ReCapProject\Business\obj\Debug\net8.0\Business.sourcelink.json
+C:\Users\Azize\source\repos\ReCapProject\Business\bin\Debug\net8.0\Core.dll
+C:\Users\Azize\source\repos\ReCapProject\Business\bin\Debug\net8.0\Core.pdb

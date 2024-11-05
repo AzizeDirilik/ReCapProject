@@ -10,3 +10,7 @@ C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\refint\Entiti
 C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\ref\Entities.dll
 C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+C:\Users\Azize\source\repos\ReCapProject\Entities\bin\Debug\net8.0\Core.dll
+C:\Users\Azize\source\repos\ReCapProject\Entities\bin\Debug\net8.0\Core.pdb
+C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Azize\source\repos\ReCapProject\Entities\obj\Debug\net8.0\Entities.csproj.CopyComplete

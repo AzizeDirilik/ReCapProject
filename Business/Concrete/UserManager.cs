@@ -44,7 +44,7 @@ namespace Business.Concrete
 
         public IResult Update(User user)
         {
-            _userDal.Delete(user);
+            _userDal.Update(user);
             return new SuccessResult();
         }
     }

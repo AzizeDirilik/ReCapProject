@@ -17,22 +17,22 @@ namespace ConsoleUI
 
 
 
-            rentalManager.Add(new Rental
-            {
+            //rentalManager.Add(new Rental
+            //{
 
-                CarId = 1,
-                CustomerId = 1,
-                RentDate = DateTime.Now,
+            //    CarId = 4,
+            //    CustomerId = 2,
+            //    RentDate = DateTime.Now,
 
 
-            });
+            //});
 
 
             //rentalManager.Update(new Rental
             //{
-            //    RentalId = 23,
-            //    CarId = 1,
-            //    CustomerId = 1,
+            //    RentalId = 26,
+            //    CarId = 4,
+            //    CustomerId = 2,
             //});
 
             CarManager carManager = new CarManager(new EfCarDal());

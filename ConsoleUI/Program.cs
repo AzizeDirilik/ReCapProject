@@ -30,7 +30,7 @@ namespace ConsoleUI
 
             //rentalManager.Update(new Rental
             //{
-            //    RentalId = 21,
+            //    RentalId = 23,
             //    CarId = 1,
             //    CustomerId = 1,
             //});

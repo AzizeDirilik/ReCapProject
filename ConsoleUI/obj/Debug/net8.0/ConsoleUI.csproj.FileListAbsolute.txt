@@ -76,3 +76,4 @@ C:\Users\Azize\source\repos\Business\ConsoleUI\obj\Debug\net8.0\refint\ConsoleUI
 C:\Users\Azize\source\repos\Business\ConsoleUI\obj\Debug\net8.0\ConsoleUI.pdb
 C:\Users\Azize\source\repos\Business\ConsoleUI\obj\Debug\net8.0\ConsoleUI.genruntimeconfig.cache
 C:\Users\Azize\source\repos\Business\ConsoleUI\obj\Debug\net8.0\ref\ConsoleUI.dll
+C:\Users\Azize\source\repos\Business\ConsoleUI\obj\Debug\net8.0\ConsoleUI.sourcelink.json

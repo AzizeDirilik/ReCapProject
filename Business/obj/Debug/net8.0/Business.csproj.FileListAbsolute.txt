@@ -17,3 +17,4 @@ C:\Users\Azize\source\repos\Business\Business\obj\Debug\net8.0\Business.dll
 C:\Users\Azize\source\repos\Business\Business\obj\Debug\net8.0\refint\Business.dll
 C:\Users\Azize\source\repos\Business\Business\obj\Debug\net8.0\Business.pdb
 C:\Users\Azize\source\repos\Business\Business\obj\Debug\net8.0\ref\Business.dll
+C:\Users\Azize\source\repos\Business\Business\obj\Debug\net8.0\Business.sourcelink.json

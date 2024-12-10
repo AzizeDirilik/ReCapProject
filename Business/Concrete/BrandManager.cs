@@ -2,6 +2,7 @@
 using Business.Constans;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -14,9 +15,9 @@ namespace Business.Concrete
 {
     public class BrandManager : IBrandService
     {
-        EfBrandDal _brandDal;
+        IBrandDal _brandDal;
 
-        public BrandManager(EfBrandDal brandDal)
+        public BrandManager(IBrandDal brandDal)
         {
             _brandDal = brandDal;
         }

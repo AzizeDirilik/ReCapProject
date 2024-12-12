@@ -13,3 +13,4 @@ C:\Users\Azize\source\repos\Business\Entity\obj\Debug\net8.0\Entities.dll
 C:\Users\Azize\source\repos\Business\Entity\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\Azize\source\repos\Business\Entity\obj\Debug\net8.0\Entities.pdb
 C:\Users\Azize\source\repos\Business\Entity\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\Azize\source\repos\Business\Entity\obj\Debug\net8.0\Entities.sourcelink.json

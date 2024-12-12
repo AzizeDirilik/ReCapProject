@@ -93,3 +93,8 @@ C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Autofac.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Autofac.Extras.DynamicProxy.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\FluentValidation.dll

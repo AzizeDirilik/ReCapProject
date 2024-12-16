@@ -12,7 +12,6 @@ namespace Business.ValidationRules.FluentValidation
     {
         public BrandValidator()
         {
-            RuleFor(b => b.BrandName).MinimumLength(2).MaximumLength(15);
             RuleFor(b => b.BrandName).NotEmpty();
         }
     }

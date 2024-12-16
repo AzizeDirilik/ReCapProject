@@ -3,6 +3,7 @@ using Business.Constans;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
@@ -28,12 +29,23 @@ namespace Business.Concrete
         [ValidationAspect(typeof(BrandValidator))]
         public IResult Add(Brand brand)
         {
+            IResult result = BusinessRules.Run(CheckBrandExists(brand.BrandName));
+
+            if (result != null)
+            {
+                return result;
+            }
             _brandDal.Add(brand);
             return new SuccessResult();
         }
 
         public IResult Delete(Brand brand)
         {
+            IResult result = BusinessRules.Run(CheckBrandExistence(brand.BrandName , brand.BrandId));
+            if (result != null)
+            {
+                return result;
+            }
             _brandDal.Delete(brand);
             return new SuccessResult();
         }
@@ -47,6 +59,27 @@ namespace Business.Concrete
         {
             _brandDal.Update(brand);
             return new SuccessResult(Messages.UpdatedBrandMessage);
+        }
+
+        private IResult CheckBrandExists(string brandName)
+        {
+            var result = _brandDal.GetAll(b => b.BrandName == brandName).Any();
+
+            if (result)
+            {
+                return new ErrorResult();
+            }
+            return new SuccessResult();
+        }
+       
+        private IResult CheckBrandExistence(string brandName, int brandId)
+        {
+            var result = _brandDal.GetAll(b => b.BrandName == brandName && b.BrandId == brandId).Any();
+            if (result)
+            {
+                return new SuccessResult();
+            }
+            return new ErrorResult();
         }
     }
 }

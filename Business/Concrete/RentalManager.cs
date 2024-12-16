@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Constans;
+using Core.Utilities.Business;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
@@ -25,9 +26,59 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
+            IResult businessResult = BusinessRules.Run(CheckCarReturned(rental));
+
+            if (businessResult == null)
+            {
+                _rentalDal.Add(rental);
+                return new SuccessResult();
+            }
+            return new ErrorResult();
+        }
+
+        public IResult Delete(Rental rental)
+        {
+            IResult result = BusinessRules.Run(CheckDeletable());
+            if (result != null)
+            {
+                _rentalDal.Delete(rental);
+                return new SuccessResult();
+            }
+            return new ErrorResult("Arac kiradayken silinemez");
+        }
+
+        public IDataResult<List<Rental>> GetAll()
+        {
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+        }
+
+        public IDataResult<Rental> GetById(int rentalId)
+        {
+            return new SuccessDataResult<Rental>(_rentalDal.Get(r => r.RentalId == rentalId));
+        }
+
+        public IResult Update(Rental rental)
+        {
+            var rentalToUpdate = _rentalDal.GetAll(r => r.RentalId == rental.RentalId && r.ReturnDate == null).FirstOrDefault();
+
+            if (rentalToUpdate != null)
+            {
+                rentalToUpdate.ReturnDate = DateTime.Now;
+                _rentalDal.Update(rentalToUpdate);
+                Console.WriteLine("Araba teslim edildi");
+            }
+            else
+            {
+                Console.WriteLine("Araba zaten teslim edilmiş.");
+                return new ErrorResult();
+            }
+
+            return new SuccessResult();
+        }
 
 
-
+        private IResult CheckCarReturned(Rental rental)
+        {
             var result = _rentalDal.GetAll(r => r.CarId == rental.CarId && r.ReturnDate == null).FirstOrDefault();
 
             if (result != null)
@@ -38,74 +89,34 @@ namespace Business.Concrete
             }
             else
             {
+                rental.RentDate = DateTime.Now;
                 _rentalDal.Add(rental);
-                return new SuccessResult();   
+                return new SuccessResult();
             }
-
-
-            //var carIsNull = _rentalDal.GetAll().FirstOrDefault(r => r.ReturnDate == null 
-            //&& r.CarId == rental.CarId 
-            //&& r.CustomerId ==rental.CustomerId);
-            //if (carIsNull != null)
-            //{
-            //    rental.ReturnDate = DateTime.Now;   
-            //    _rentalDal.Add(rental);
-            //    return new SuccessResult();
-            //}
-            //var result = _rentalDal.GetAll().FirstOrDefault(r => r.ReturnDate !=  null 
-            //&& r.CarId == rental.CarId 
-            //&& r.CustomerId == rental.CustomerId );
-            //if (result != null)
-            //{
-            //    _rentalDal.Add(rental);
-            //    return new SuccessResult();
-            //}
-
-
-
-            //else
-            //{
-            //    return new ErrorResult();
-            //}
-
         }
 
-        public IResult Delete(Rental rental)
+        private IResult CheckCarReturnDate(int day)
         {
-            _rentalDal.Delete(rental);
+            var result = _rentalDal.GetAll(r => r.ReturnDate.HasValue && r.ReturnDate.Value.Day == day);
+            if (result != null && result.Any())
+            {
+                return new ErrorResult("Ayni arac ayni gun icinde kirilanamaz");
+            }
             return new SuccessResult();
         }
 
-        public IDataResult<List<Rental>> GetAll()
+        private IResult CheckDeletable()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
-        }
-
-        public IDataResult<Rental> GetById(int rentalId)
-        {
-            return new SuccessDataResult<Rental>(_rentalDal.Get(r => r.RentalId == rentalId));  
-        }
-
-        public IResult Update(Rental rental)
-        {
-
-            var result = _rentalDal.GetAll(r => r.RentalId == rental.RentalId && r.ReturnDate == null).FirstOrDefault();
+            var result = _rentalDal.GetAll(r => r.ReturnDate == null).FirstOrDefault();
 
             if (result != null)
             {
-
-                rental.ReturnDate = DateTime.Now;
-                _rentalDal.Update(rental);
-                Console.WriteLine("Araba teslim edildi");
+                return new ErrorResult("Arac kiradayken silinemez");
             }
-            else
-            {
-                Console.WriteLine("Araba Teslim Edilmis");
-            }
-
             return new SuccessResult();
-
-          
         }
+
+
+
     }
 }

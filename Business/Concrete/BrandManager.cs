@@ -41,7 +41,7 @@ namespace Business.Concrete
 
         public IResult Delete(Brand brand)
         {
-            IResult result = BusinessRules.Run(CheckBrandExistence(brand.BrandName , brand.BrandId));
+            IResult result = BusinessRules.Run(CheckBrandExistence(brand.BrandName));
             if (result != null)
             {
                 return result;
@@ -63,23 +63,30 @@ namespace Business.Concrete
 
         private IResult CheckBrandExists(string brandName)
         {
-            var result = _brandDal.GetAll(b => b.BrandName == brandName).Any();
 
-            if (result)
+
+            if (DoesBrandExists(b => b.BrandName == brandName))
             {
                 return new ErrorResult();
             }
             return new SuccessResult();
         }
        
-        private IResult CheckBrandExistence(string brandName, int brandId)
+        private IResult CheckBrandExistence(string brandName)
         {
-            var result = _brandDal.GetAll(b => b.BrandName == brandName && b.BrandId == brandId).Any();
-            if (result)
+            
+            if (DoesBrandExists(b => b.BrandName == brandName ))
             {
                 return new SuccessResult();
             }
             return new ErrorResult();
         }
+
+       
+        private bool DoesBrandExists(Func<Brand, bool> predicate)
+        {
+            return _brandDal.GetAll().Where(predicate).Any();
+        }
+
     }
 }

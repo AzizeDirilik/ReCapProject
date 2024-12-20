@@ -23,7 +23,7 @@ namespace Core.Utilities.Helpers.FileHelper
 
         public void Delete(string path)
         {
-            if (Path.Exists(FilePath.Full(path))
+            if (Path.Exists(FilePath.Full(path)))
             {
                 File.Delete(FilePath.Full(path));
             }

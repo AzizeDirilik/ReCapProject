@@ -63,8 +63,6 @@ namespace Business.Concrete
 
         private IResult CheckBrandExists(string brandName)
         {
-
-
             if (DoesBrandExists(b => b.BrandName == brandName))
             {
                 return new ErrorResult();

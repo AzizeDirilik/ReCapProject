@@ -26,6 +26,10 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
+
+
+
+
             IResult businessResult = BusinessRules.Run(CheckCarReturned(rental));
 
             if (businessResult == null)
@@ -90,7 +94,6 @@ namespace Business.Concrete
             else
             {
                 rental.RentDate = DateTime.Now;
-                _rentalDal.Add(rental);
                 return new SuccessResult();
             }
         }

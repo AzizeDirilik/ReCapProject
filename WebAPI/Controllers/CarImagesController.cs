@@ -9,16 +9,14 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CarImagesController : ControllerBase
     {
-        ICarImageService _carImageService;
-
+        private readonly ICarImageService _carImageService;
         public CarImagesController(ICarImageService carImageService)
         {
             _carImageService = carImageService;
         }
 
         [HttpGet("getall")]
-
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
             var result = _carImageService.GetAll();
             if (result.Success)
@@ -28,11 +26,10 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPost("add")]
-
-        public IActionResult Add(CarImage carImage)
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
         {
-            var result = _carImageService.Add(carImage);
+            var result = _carImageService.GetById(id);
             if (result.Success)
             {
                 return Ok(result);
@@ -40,11 +37,24 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPost("update")]
 
-        public IActionResult Update(CarImage carImage)
+        [HttpPost("add")]
+        public IActionResult Add([FromForm] IFormFile file, [FromForm] int carId)
+        { //file ve carId lazım kullanıcı tarafından.
+            CarImage carImage = new() { CarId = carId };
+            var result = _carImageService.Add(file, carImage);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update([FromForm] IFormFile file, [FromForm] int id)
         {
-            var result = _carImageService.Update(carImage);
+            CarImage oldCarImage = _carImageService.GetById(id).Data;
+            var result = _carImageService.Update(file, oldCarImage);
             if (result.Success)
             {
                 return Ok(result);
@@ -53,7 +63,6 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("delete")]
-
         public IActionResult Delete(CarImage carImage)
         {
             var result = _carImageService.Delete(carImage);
@@ -65,3 +74,4 @@ namespace WebAPI.Controllers
         }
     }
 }
+

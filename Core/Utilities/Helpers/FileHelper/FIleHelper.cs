@@ -1,4 +1,5 @@
 ﻿using Core.Utilities.Helpers.FileHelper.Constants;
+using Core.Utilities.Helpers.GuildHelper;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace Core.Utilities.Helpers.FileHelper
             {
                 File.Delete(FilePath.Full(path));
             }
-            throw new DirectoryNotFoundException("Hata");
+           
         }
 
         public void Update(IFormFile file, string imagePath)

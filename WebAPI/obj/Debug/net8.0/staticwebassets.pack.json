@@ -1,20 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\172e3ed3-083e-4e85-bc32-36f33afa71e5.png",
-      "PackagePath": "staticwebassets\\images\\172e3ed3-083e-4e85-bc32-36f33afa71e5.png"
-    },
-    {
-      "Id": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\3230005d-3bd1-4570-9730-e615f4609592.png",
-      "PackagePath": "staticwebassets\\images\\3230005d-3bd1-4570-9730-e615f4609592.png"
-    },
-    {
-      "Id": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\5b67e851-a689-4f69-95c4-84a09545e34a.JPG",
-      "PackagePath": "staticwebassets\\images\\5b67e851-a689-4f69-95c4-84a09545e34a.JPG"
-    },
-    {
-      "Id": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\b72566c2-75f5-4795-902d-cfc5aa985a66.png",
-      "PackagePath": "staticwebassets\\images\\b72566c2-75f5-4795-902d-cfc5aa985a66.png"
+      "Id": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\b0c0d1f7-b162-4de5-a4be-f72e6e681f2a.jpeg",
+      "PackagePath": "staticwebassets\\images\\b0c0d1f7-b162-4de5-a4be-f72e6e681f2a.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",

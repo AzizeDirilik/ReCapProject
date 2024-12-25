@@ -43,10 +43,15 @@ namespace Business.Concrete
 
         public IResult Delete(CarImage carImage)
         {
-            _carImageDal.Delete(carImage);
-            _fileHelper.Delete(carImage.ImagePath!);
-            return new SuccessResult();
+            var result = _carImageDal.GetAll(c => c.CarImageId == carImage.CarImageId && c.ImagePath == carImage.ImagePath);
+            if (result != null && result.Any())
+            {
+                _carImageDal.Delete(carImage);
+                _fileHelper.Delete(carImage.ImagePath!);
+                return new SuccessResult();
         }
+            return new ErrorResult();
+    }
 
         public IResult Update(IFormFile file, CarImage carImage)
         {
@@ -76,12 +81,13 @@ namespace Business.Concrete
             return new SuccessDataResult<CarImage>(_carImageDal.Get(c => c.CarImageId == id));
         }
 
-        public IDataResult<List<CarImage>> GetByCarId(int carId)
+
+        public IDataResult<List<CarImage>> GetCarById(int carId)
         {
             var carImages = _carImageDal.GetAll(c => c.CarId == carId);
             if (carImages.Count == 0)
             {
-                carImages.Add(new CarImage() { CarId = carId, ImagePath = "default.png" });
+                carImages.Add(new CarImage() { CarId = carId, ImagePath = "default.jpeg" });
                 return new SuccessDataResult<List<CarImage>>(carImages);
             }
             return new SuccessDataResult<List<CarImage>>(carImages);
@@ -98,5 +104,7 @@ namespace Business.Concrete
                 return new SuccessResult();
             }
         }
+
+
     }
 }

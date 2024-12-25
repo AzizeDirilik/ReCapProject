@@ -22,14 +22,22 @@ namespace Core.Utilities.Helpers.FileHelper
             return uniqueFileName;
         }
 
-        public void Delete(string path)
+        public void Delete(string filePath)
         {
-            if (Path.Exists(FilePath.Full(path)))
+            var fullPath = FilePath.Full(filePath);
+            if (File.Exists(fullPath))
             {
-                File.Delete(FilePath.Full(path));
+                File.Delete(fullPath);
+                Console.WriteLine($"File deleted: {fullPath}");
             }
-           
+            else
+            {
+                Console.WriteLine($"File not found: {fullPath}");
+            }
+
+
         }
+
 
         public void Update(IFormFile file, string imagePath)
         {

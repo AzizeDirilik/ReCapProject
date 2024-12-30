@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wk++1IaU6Oe/cdNf1vRooaifJwixNirFEfxey0bvGPA=",
+  "Hash": "63gJTv26LmvE1D/coc2+W453I0g+tFKmxWSuXdTKbZA=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg",
+      "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\7b0a9ab3-73c4-4885-b286-e09e10c43664.jpg",
       "SourceId": "WebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\",
       "BasePath": "_content/WebAPI",
-      "RelativePath": "images/a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg",
+      "RelativePath": "images/7b0a9ab3-73c4-4885-b286-e09e10c43664.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\7b0a9ab3-73c4-4885-b286-e09e10c43664.jpg"
     },
     {
       "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\default.jpg",

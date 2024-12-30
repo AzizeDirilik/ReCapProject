@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Helpers.FileHelper
 {
-    public class FIleHelper : IFileHelper
+    public class FileHelper : IFileHelper
     {
         public string Add(IFormFile file)
         {
@@ -41,13 +41,11 @@ namespace Core.Utilities.Helpers.FileHelper
 
         public void Update(IFormFile file, string imagePath)
         {
-            //bu kısımda var olan guid'i silip eklemek yerine
-            //guid yapısı aynı sadece dosyayı değiştiriyorum.
+           
             var fullpath = FilePath.Full(imagePath);
             if (Path.Exists(fullpath))
             {
                 using FileStream fileStream = new(fullpath, FileMode.Create);
-                //FileMode.Create burada üzerine yazma işlemi yapar.
                 file.CopyTo(fileStream);
                 fileStream.Flush();
             }

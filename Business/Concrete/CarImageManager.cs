@@ -2,6 +2,7 @@
 using Business.Constans;
 using Core.Utilities.Business;
 using Core.Utilities.Helpers.FileHelper;
+using Core.Utilities.Helpers.FileHelper.Constants;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
@@ -33,13 +34,21 @@ namespace Business.Concrete
                 return result;
             }
 
-            string guid = _fileHelper.Add(file);
-            carImage.ImagePath = guid;
+            if (file == null || file.Length == 0)
+            {
+                carImage.ImagePath = FilePath.Full("default.jpg");
+            }
+            else
+            {
+                string guid = _fileHelper.Add(file);
+                carImage.ImagePath = guid;
+            }
+
             carImage.Date = DateTime.Now;
             _carImageDal.Add(carImage);
             return new SuccessDataResult<CarImage>(carImage);
-
         }
+
 
         public IResult Delete(CarImage carImage)
         {
@@ -72,16 +81,6 @@ namespace Business.Concrete
         }
 
 
-        public IDataResult<List<CarImage>> GetCarById(int carId)
-        {
-            var carImages = _carImageDal.GetAll(c => c.CarId == carId);
-            if (carImages.Count == 0)
-            {
-                carImages.Add(new CarImage() { CarId = carId, ImagePath = "default.jpg" });
-                return new SuccessDataResult<List<CarImage>>(carImages);
-            }
-            return new SuccessDataResult<List<CarImage>>(carImages);
-        }
 
         private IResult CountByCarId(CarImage carImage)
         {

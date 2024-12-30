@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Juo5jnmmJjOFEDRHy1ihPHFR6Kma5ClPtzvmYk85PYs=",
+  "Hash": "Wk++1IaU6Oe/cdNf1vRooaifJwixNirFEfxey0bvGPA=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\b0c0d1f7-b162-4de5-a4be-f72e6e681f2a.jpeg",
+      "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg",
       "SourceId": "WebAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\",
       "BasePath": "_content/WebAPI",
-      "RelativePath": "images/b0c0d1f7-b162-4de5-a4be-f72e6e681f2a.jpeg",
+      "RelativePath": "images/a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\b0c0d1f7-b162-4de5-a4be-f72e6e681f2a.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\a005fefb-2204-46b1-801c-dcaab3dba6ab.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\images\\default.jpg",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Azize\\source\\repos\\Business\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "images/default.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default.jpg"
     }
   ]
 }

@@ -76,7 +76,6 @@ C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.GeneratedMSB
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfoInputs.cache
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfo.cs
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.csproj.CoreCompileInputs.cache
-C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\staticwebassets.build.json
@@ -99,3 +98,4 @@ C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Autofac.Extras.Dyna
 C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\WebAPI.staticwebassets.runtime.json
+C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs

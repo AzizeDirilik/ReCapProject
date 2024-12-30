@@ -55,17 +55,7 @@ namespace Business.Concrete
 
         public IResult Update(IFormFile file, CarImage carImage)
         {
-            if (carImage == null)
-            {
-                return new ErrorResult("Car image data is null.");
-            }
-
-            if (string.IsNullOrEmpty(carImage.ImagePath))
-            {
-                return new ErrorResult("ImagePath cannot be null or empty.");
-            }
-
-            _fileHelper.Update(file, carImage.ImagePath);
+            _fileHelper.Update(file, carImage.ImagePath!);
             carImage.Date = DateTime.Now;
             _carImageDal.Update(carImage);
             return new SuccessDataResult<CarImage>(carImage);
@@ -87,7 +77,7 @@ namespace Business.Concrete
             var carImages = _carImageDal.GetAll(c => c.CarId == carId);
             if (carImages.Count == 0)
             {
-                carImages.Add(new CarImage() { CarId = carId, ImagePath = "default.jpeg" });
+                carImages.Add(new CarImage() { CarId = carId, ImagePath = "default.jpg" });
                 return new SuccessDataResult<List<CarImage>>(carImages);
             }
             return new SuccessDataResult<List<CarImage>>(carImages);

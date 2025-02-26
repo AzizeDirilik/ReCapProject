@@ -99,3 +99,9 @@ C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\WebAPI.staticwebassets.runtime.json
 C:\Users\Azize\source\repos\Business\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\JWT.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Azize\source\repos\Business\WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

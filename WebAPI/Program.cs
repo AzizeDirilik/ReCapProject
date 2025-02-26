@@ -1,4 +1,3 @@
-
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
 using Business.Abstract;
@@ -61,6 +60,8 @@ namespace WebAPI
             }
 
             app.UseHttpsRedirection();
+            
+            app.UseAuthentication(); 
 
             app.UseAuthorization();
 

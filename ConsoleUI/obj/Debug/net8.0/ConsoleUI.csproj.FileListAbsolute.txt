@@ -91,3 +91,6 @@ C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.AspNet
 C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
+C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Azize\source\repos\Business\ConsoleUI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll

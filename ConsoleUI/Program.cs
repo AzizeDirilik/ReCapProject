@@ -100,17 +100,6 @@ namespace ConsoleUI
             });
         }
 
-        private static void NewUserAdd()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            userManager.Add(new User
-            {
-                FirstName = "Azize",
-                LastName = "Dirilik",
-                Email = "Azizedirilik",
-                Password = "123",
-
-            });
-        }
+     
     }
 }

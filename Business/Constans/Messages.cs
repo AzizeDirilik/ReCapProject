@@ -32,5 +32,13 @@ namespace Business.Constans
         public static string DeletedRentalMessage = "Kiralama kaydi silindi";
         public static string UpdatedRentalMessage = "Kiralama kaydi guncellendi";
 
+        public static string AuthorizationDenied = "Yetkiniz Yok";
+
+        public static string UserRegistered = "Kayıt Oldu";
+        public static string UserNotFound = "Kullanıcı Bulunamadı";
+        public static string PasswordError = "Parola Hatası";
+        public static string SuccessfulLogin = "Başarılı Giriş";
+        public static string UserAlreadyExists = "Kullanıcı Mevcut";
+        public static string AccessTokenCreated = "Token Oluşturuldu";
     }
 }

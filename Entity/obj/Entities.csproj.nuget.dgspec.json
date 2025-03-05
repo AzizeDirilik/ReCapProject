@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.6.0, )"

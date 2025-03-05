@@ -824,6 +824,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.Extensions.Configuration": "9.0.2",
           "Microsoft.Extensions.Configuration.Binder": "9.0.2",
+          "Microsoft.Extensions.DependencyInjection": "9.0.2",
           "System.IdentityModel.Tokens.Jwt": "8.6.0"
         },
         "runtime": {

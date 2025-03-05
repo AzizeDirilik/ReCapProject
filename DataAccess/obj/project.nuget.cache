@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SvVGamc+7xC79/yWrWv7o2EaZN0IHRDUOCGS6kbuydTRQC4V6wkwk64cMiKWGfRCP4XNkuU7MdILiOMXbDd1RQ==",
+  "dgSpecHash": "WxmehjTzjIPTeT5yfn9ZGvlnj+vOEDzsCyyuc0lA7t3EtUCWDI7K9oDNOete9gPmcuuM0vp7HG5SKlL3vAmJwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Azize\\source\\repos\\Business\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
@@ -29,8 +29,8 @@
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.2\\microsoft.extensions.configuration.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.configuration.binder\\9.0.2\\microsoft.extensions.configuration.binder.9.0.2.nupkg.sha512",
-    "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
-    "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.2\\microsoft.extensions.dependencyinjection.9.0.2.nupkg.sha512",
+    "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.2\\microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.logging\\9.0.0\\microsoft.extensions.logging.9.0.0.nupkg.sha512",
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0\\microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
     "C:\\Users\\Azize\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",

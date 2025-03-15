@@ -26,6 +26,8 @@ namespace WebAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddMemoryCache();
+
 
             builder.Services.AddHttpContextAccessor();
 

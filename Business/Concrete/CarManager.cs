@@ -4,6 +4,7 @@ using Business.Constans;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
@@ -60,6 +61,18 @@ namespace Business.Concrete
         public IDataResult<List<CarDetailsDto>> GetCarDetails()
         {
             return new ErrorDataResult<List<CarDetailsDto>>(_carDal.GetCarDetails());    
+        }
+
+        [TransactionScopeAspect]
+        public IResult TransactionalOperation(Car car)
+        {
+            Add(car);
+            if (car.DailyPrice <= 100)
+            {
+                throw new Exception("Günlük kiralama ücreti 100 tl'den küçük olamaz."); 
+            }
+            Update(car);
+            return new SuccessResult("Ürün eklendi.");
         }
 
         public IResult Update(Car car)
